@@ -59,8 +59,6 @@ log_message() {
 
 send_mail_notification() {
     /usr/bin/tar -czf "${LOG_FILE}.tar.gz" "${LOG_FILE}"
-    #echo "Check attached log file for more details" | mailx -v -S smtp=smtp.example.com -s "$1" -r "no-reply-nonprod-cpdadmin@example.com" -a "${LOG_FILE}.tar.gz" "manoharreddy.bandela@example.com"  "user@example.com"
-    #echo "Check attached log file for more details" | mailx -v -S smtp=smtp.example.com -s "$1" -r "no-reply-nonprod-cpdadmin@example.com" -a "${LOG_FILE}.tar.gz" $MAIL_ID_LIST
     cat "${LOG_FILE}" | mailx -v -S smtp=smtp.example.com -s "$1" -r "no-reply-nonprod-cpdadmin@example.com" -a "${LOG_FILE}.tar.gz" $MAIL_ID_LIST
 }
 
