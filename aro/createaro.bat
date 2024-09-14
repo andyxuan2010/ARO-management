@@ -78,7 +78,7 @@ if "%1"=="dev" (
     set aro-instance-name=cp4ddev
     set address-prefix-master=10.67.89.0/26
     set address-prefix-worker=10.67.89.64/26
-    set domain-name=dev.aero.bombardier.net
+    set domain-name=dev.example.com
 ) else if "%1"=="prd" (
     set resource-group=rg-cp4d-cc-prd
     set cluster-resource-group=rg-cp4daro-cc-prd        
@@ -89,7 +89,7 @@ if "%1"=="dev" (
     set aro-instance-name=cp4dprd
     set address-prefix-master=10.67.79.0/26
     set address-prefix-worker=10.67.79.64/26
-    set domain-name=ca.aero.bombardier.net
+    set domain-name=ca.example.com
 ) else (
     echo Error: Invalid input parameter. Please specify either "dev" or "prd".
     exit /b 1
@@ -100,7 +100,7 @@ REM create the resource group
 rem echo az group show --name %resource-group%
 call az group show --name %resource-group% 2>null
 if %errorlevel% equ 3 (
-	call az group create --name %resource-group% --location canadacentral  --tags "Application Name"="Cloud Pak for Data (CP4D)" "Application Owner"="Bassem Dabboubi" "AppSupport Team"="Bombardier" "Business Owner"="Patrick Tessier" "Environment"=%env% "Infra Availability Classification"="Bronze" "InfraSupport Team"="Bombardier" "Project Name"="Data Governance Foundation - Tool Setup" "Project Number"="61238"  "RPO-RTO"="72h/24h" "Run Cost (Approved Run Budget)-USD"="636.6 K" 2>null
+	call az group create --name %resource-group% --location canadacentral  --tags "Application Name"="Cloud Pak for Data (CP4D)" "Application Owner"="Bassem Dabboubi" "AppSupport Team"="example.com" "Business Owner"="Patrick Tessier" "Environment"=%env% "Infra Availability Classification"="Bronze" "InfraSupport Team"="example.com" "Project Name"="Data Governance Foundation - Tool Setup" "Project Number"="61238"  "RPO-RTO"="72h/24h" "Run Cost (Approved Run Budget)-USD"="636.6 K" 2>null
 	if !errorlevel! neq 0 (
 	    echo Error: Failed to create the resource group %resource-group%.
         exit /b !errorlevel!
