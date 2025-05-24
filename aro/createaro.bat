@@ -1,4 +1,3 @@
-REM Author : Andy Xuan
 @echo off
 SETLOCAL EnableDelayedExpansion
 

@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # The following commands will be creating ACR then configure image pull secret in the ARO Cluster
 
 

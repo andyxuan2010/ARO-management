@@ -1,3 +1,4 @@
+#!/bin/bash
 Connect the ARO Cluster as ARC Cluster :
 
 

@@ -1,6 +1,4 @@
 # Azure Red Hat OpenShift cluster deletion script.
-# Marek Martofel - Red Hat Inc.
-
 # Customize three following lines to choose your Azure region, resource group name and ARO cluster name
 
 LOCATION=eastus                 # the location of your cluster

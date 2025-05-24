@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Author : Andy Xuan
 
 # export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 # export OCP_USERNAME=kubeadmin

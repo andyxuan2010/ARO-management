@@ -1,5 +1,5 @@
+#!/bin/bash
 # Azure Red Hat OpenShift cluster creation script.
-# Marek Martofel - Red Hat Inc.
 
 # Customize three following lines to choose your Azure region, resource group name and ARO cluster name
 

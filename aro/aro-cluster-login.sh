@@ -1,5 +1,4 @@
-
-
+#!/bin/bash
 CLUSTER="name_of_your_aro_cluster"		# Name of your ARO cluster
 RESOURCEGROUP="rg-aro-cluster"  		# Name of Resource Group where you want to create your ARO Cluster
 
