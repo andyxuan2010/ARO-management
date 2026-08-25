@@ -62,4 +62,24 @@ The usage is as follows:<br>
 Note: This script assumes that you are logged in as kubeadmin - if you have created a new cluster-admin user, you will need to change the script to reflect this. Your cluster will also become unavailable for several minutes while the revised pull-secret is propogated across all nodes.
 <br>
 
+## Pipeline used
+
+The checked-in GitHub Actions Pages workflow publishes the repository contents
+on `main`; there is no automated cluster-provisioning job. ARO changes are
+therefore executed manually after review with Azure CLI, OpenShift CLI, and the
+scripts in `aro/`, `tools/`, and `howto/`.
+
+## Usage
+
+```bash
+az login
+az extension add -n aro --index https://az.aroapp.io/stable
+./tools/aro4-build.sh [custom.domain.example]
+```
+
+Place a Red Hat pull secret in `pull-secret.txt` when required. Use
+`./aro4-aad-connect.sh <cluster-name> <resource-group>` for AAD integration and
+review the delete and pull-secret replacement scripts carefully because they
+change or remove live cluster resources.
+
 <hr>
